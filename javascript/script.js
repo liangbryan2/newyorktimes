@@ -3,8 +3,8 @@ var params = {'api-key': "cec53b1c160747d389d923d7adafdf94",};
 
 url += '?' + $.param(params);
 
-var startYearInput = $('#startYear').val();
-var endYearInput = $('#endYear').val();
+var startYearInput = $('#startyear').val();
+var endYearInput = $('#endyear').val();
 
 // checks for start date param
 if (startYearInput) {
