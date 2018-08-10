@@ -4,3 +4,28 @@
 }
 
 
+
+.container {
+    margin-top: 30px;
+    height: auto;
+    text-align: left;
+    border-color: black;
+    border-width: 3px;
+
+}
+
+
+
+.card-header {
+    text-align: left;
+
+}
+
+
+.form-group {
+    text-align: left;
+}
+
+.label {
+
+}

@@ -21,10 +21,11 @@
     </div>
 
     <div class="container">
-
-            <form>
+            <div class="card">
+                    <h5 class="card-header">Search Parameters</h5>   </div>
+            <form id="form">
                     <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Search Terms</label>
+                            <label for="exampleFormControlTextarea1" class="label">Search Terms</label>
                             <textarea class="form-control" id="search" rows="1"></textarea>
                         </div>
 
@@ -53,21 +54,29 @@
 
 
 
-                    <button type="button" class="btn btn-primary">Search</button>
-                    <button type="button" class="btn btn-primary">Clear Results</button>
+                    <button type="button" class="btn btn-primary" id="search">Search</button>
+                    <button type="button" class="btn btn-primary" id="clear">Clear Results</button>
 
             </form>
+        </div>
 
 
-    <div class="container">    
-
-        
-
+    <div class="container">
+     <div class="card">
+        <h5 class="card-header">Top Articles</h5>   
+        <div id="result">
     </div>    
-
-
-
     </div>
+
+
+        <!-- <div class="card-body">
+                      <h5 class="card-title">Special title treatment</h5>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a> -->
+
+
+
+
 
 
 
