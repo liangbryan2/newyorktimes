@@ -1,6 +1,5 @@
 var url = "https://api.nytimes.com/svc/search/v2/articlesearch.json";
 var params = {'api-key': "cec53b1c160747d389d923d7adafdf94",};
-
 url += '?' + $.param(params);
 
 var startYearInput = $('#startyear').val();
@@ -20,17 +19,25 @@ if (endYearInput) {
   }  
 }
 
-var searchTerm = $('#search').val();
+var searchTerm;
+var numRecords;
 
-params['q'] = searchTerm;
+$(document).ready(function() {
 
-var numRecords = parseInt($('#numberofrecords').val());
 
-$('#search').on('click', function() {
+
+$('#searchButton').on('click', function(event) {
+  event.preventDefault();
+  console.log('hello');
+  searchTerm = $('#search').val();
+  console.log("Searchter: ", searchTerm);
+  params['q'] = searchTerm;
+  numRecords = parseInt($('#numberofrecords').val());
   $.ajax({
     url: url,
     method: 'GET',
-  }).done(function(result) {
+  }).then(function(result) {
+    console.log(result);
     console.log(result);
     for (var i = 0; i < numRecords; i++) {
       var newDiv = $('<div>');
@@ -52,9 +59,9 @@ $('#search').on('click', function() {
 
 $('#clear').on('click', function(){
   $('#form').trigger('reset');
-})
+});
 
-
+});
 
 
 
