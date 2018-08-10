@@ -50,6 +50,10 @@ $('#search').on('click', function() {
 
 });
 
+$('#clear').on('click', function(){
+  $('#form').trigger('reset');
+})
+
 
 
 
